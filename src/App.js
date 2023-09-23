@@ -1,12 +1,14 @@
 import './App.css';
-import Home from './pages/Home';
 import Navbar from './components/Navbar';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
     <div style={styles.container}>
       <div style={styles.navbarcontainer}><Navbar /></div>
-      <div style={styles.mainpagecontainer}><Home /></div>
+      <section style={styles.mainsectioncontainer}>
+        <Outlet />
+      </section>
     </div>
   );
 }
@@ -16,20 +18,23 @@ export default App;
 const styles = {
   container: {
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'stretch',
+
   },
   navbarcontainer: {
       //Fixed vertical navbar
       position: 'fixed',
       display: 'flex',
       flex: '1',
+      border: '1px solid black',
+
   },
-  mainpagecontainer: {
-      //Fixed vertical navbar
+  mainsectioncontainer: {
       display: 'flex',
       flex: '3',
-      height: '100vh',
       marginLeft: '240px',
       marginRight: '0px',
+      border: '1px solid black',
+
   },
 }

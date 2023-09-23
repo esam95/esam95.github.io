@@ -1,15 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const StyledComponent = styled.div`
-  background-color: ${({ theme }) => theme.colors.background};
-  color: ${({ theme }) => theme.colors.text};
-  padding: 20px;
-`;
 
 function Home() {
   return (
-    <StyledComponent>
+    <div style={styles.container}>
       <h1>My name is Esam Gelani</h1>
       <h2>An aspiring frontend developer</h2>
       <p>Welcome to my portfolio, where i will showcase my experience and my work.</p>
@@ -41,22 +34,31 @@ function Home() {
       <div>Mail</div>
       <div>Telefon</div>
 
-    </StyledComponent>
+    </div>
   );
 }
 
 export default Home;
 
 const styles = {
-    projects: {
-        display: 'flex',
-        justifyContent: 'space-between',
-    },
-    project: {
-        backgroundColor: '#00bcd4', 
-        color: '#ffffff',
+    container: {
         padding: '20px',
         margin: '20px',
         borderRadius: '5px',
+        border: '1px solid black',
+
+    },
+    projects: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        border: '1px solid black',
+
+    },
+    project: {
+        padding: '20px',
+        margin: '20px',
+        borderRadius: '5px',
+        border: '1px solid black',
+
     }
 }
