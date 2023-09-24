@@ -19,21 +19,24 @@ const styles = {
   container: {
       display: 'flex',
       alignItems: 'stretch',
-
   },
   navbarcontainer: {
       //Fixed vertical navbar
       position: 'fixed',
       display: 'flex',
-      flex: '1',
+      flex: '0', 
+      width: '200px',// Set a fixed width for the sidebar
       border: '1px solid black',
-
+      top: '0',
+      left: '0',
+      height: '100vh',
+      
   },
   mainsectioncontainer: {
       display: 'flex',
-      flex: '3',
-      marginLeft: '240px',
-      marginRight: '0px',
+      flex: '1', // Let it grow to fill the remaining space
+      marginLeft: '200px', // Ensure it's positioned to the right of the sidebar
+      padding: '20px',
       border: '1px solid black',
 
   },

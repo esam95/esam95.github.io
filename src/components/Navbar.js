@@ -1,14 +1,14 @@
 import React from 'react'
 
 export default function Navbar() {
-  return (
-    //fixed navbar
+  const pathAfterHost = window.location.pathname;
 
+  return (
     <nav style={styles.navbar}>
-        <div style={styles.navbarItem} onClick={() => {window.location.href = "/"}}>Home</div>
-        <div style={styles.navbarItem} onClick={() => {window.location.href = "/Skills"}}>Skills</div>
-        <div style={styles.navbarItem} onClick={() => {window.location.href = "/Projects"}}>Projects</div>
-        <div style={styles.navbarItem} onClick={() => {window.location.href = "/Contact"}}>Contact</div>
+        <div id={'home'} className={`navbarItem${pathAfterHost === '/' ? ' active' : ''}`} onClick={() => {window.location.href = "/"}}>Home</div>
+        <div className={`navbarItem${pathAfterHost === '/skills' ? ' active' : ''}`} onClick={() => {window.location.href = "/skills"}}>Skills</div>
+        <div className={`navbarItem${pathAfterHost === '/projects' ? ' active' : ''}`} onClick={() => {window.location.href = "/projects"}}>Projects</div>
+        <div className={`navbarItem${pathAfterHost === '/contact' ? ' active' : ''}`}  onClick={() => {window.location.href = "/contact"}}>Contact</div>
     </nav>
   )
 }
@@ -16,17 +16,7 @@ const styles = {
     navbar: {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
+        alignItems: 'stretch',
         width: '200px',
-        // height: '100vh',
-    },
-    navbarItem: {
-        //Navbar items
-        padding: '20px',
-        margin: '20px',
-        borderRadius: '5px',
-        border: '1px solid black',
-        cursor: 'pointer',
-
-    }
-}
+      },
+  }

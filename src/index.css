@@ -5,9 +5,62 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #625a5a;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbarItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid black;
+  cursor: pointer;
+  border-bottom: none;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  flex: 1; /* Make each item fill the available vertical space equally */
+  background: linear-gradient(to right, #555, #888); /* Gradient background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.navbarItem.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid black;
+  cursor: pointer;
+  border-bottom: none;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  flex: 1; /* Make each item fill the available vertical space equally */
+  background: linear-gradient(to right, #661111, #e45a5a); /* Gradient background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.navbarItem:hover,
+.navbarItem.active:hover {
+  background: linear-gradient(to right, #661111, #e45a5a); /* Gradient background */
+  color: white; /* Change the text color on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+}
+
+/* #home {
+  background-color: #BF4F74;
+  
+} */
