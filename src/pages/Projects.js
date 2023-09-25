@@ -5,15 +5,15 @@ export default function Projects() {
     <div style={styles.container}>
   <p>Utforska mina projekt nedan:</p>
   <main style={styles.gallery}>
-    <a href="länk-till-projekt-1">
+    <a href="https://webbshop-livs.vercel.app/">
       <div style={styles.projectItem}>
-        <img src="bild-länk-för-projekt-1" alt="Projekt 1" style={styles.projectImage} />
+        <img src="/images/webbshop-screenshot.JPG" alt="Projekt 1" style={styles.projectImage} />
         <p>Projekt 1</p>
       </div>
     </a>
-    <a href="länk-till-projekt-2">
+    <a href="https://omdb-seven.vercel.app/">
       <div style={styles.projectItem}>
-        <img src="bild-länk-för-projekt-2" alt="Projekt 2" style={styles.projectImage} />
+        <img src="/images/omdb-api-screenshot.JPG" alt="Projekt 2" style={styles.projectImage} />
         <p>Projekt 2</p>
       </div>
     </a>
