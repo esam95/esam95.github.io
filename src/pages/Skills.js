@@ -1,58 +1,31 @@
-import React from 'react'
+import React from 'react';
+import { FaHtml5, FaCss3, FaJs, FaReact, FaMobileAlt, FaNodeJs } from 'react-icons/fa';
+import ExperienceCard from '../components/ExperienceCard';
 
 export default function Skills() {
+
   return (
-    <div style={styles.container}>
-  <h2 style={styles.heading}>Under min 2-åriga utbildning på Jensen har jag blivit skicklig på de viktigaste frontend-språken.</h2>
-  <ul style={styles.skillList}>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>Javascript</li>
-    <li>React.js</li>
-    <li>React Native</li>
-    <li>Wordpress</li>
-  </ul>
+    <div className='container'>
+      <section>
+        <h2 className="heading">Under min 2-åriga utbildning på Jensen har jag blivit skicklig på de viktigaste frontend-verktygen.</h2>
+        <ul className="skillList">
+          <li className="icon-item"><FaHtml5 size="3em" color="#E44D26" /> <span>HTML</span></li>
+          <li className="icon-item"><FaCss3 size="3em" color="#2196F3" /> <span>CSS</span></li>
+          <li className="icon-item"><FaJs size="3em" color="#F7DF1E" /> <span>Javascript</span></li>
+          <li className="icon-item"><FaReact size="3em" color="#61DAFB" /> <span>React.js</span></li>
+          <li className="icon-item"><FaMobileAlt size="3em" color="#4CAF50" /> <span>React Native</span></li>
+          <li className="icon-item"><FaNodeJs size="3em" color="#339933" /> <span>Node.js</span></li>
+        </ul>
+      </section>
 
-  <h2 style={styles.heading}>Min nuvarande anställning och tidigare utbildning är:</h2>
-  <ul style={styles.experienceList}>
-    <li>Byggteknik och design, KTH. 2016-2019</li>
-    <li>Byggkalkylator på Folkbro AB 2021-pågående</li>
-    <li>IT-ansvarig på Folksval AB 2021-pågående</li>
-  </ul>
-</div>
+      <h2 className="heading">Min nuvarande anställning och tidigare utbildning är:</h2>
+      <section id='cardscontainer'>
+        <ExperienceCard title="Frontendutvecklare, Jensen YH" date="2022-pågående" description="Har lärt mig de viktigaste frontendverktygen, gjort flertalet projekt i grupp med versionhantering i github."/>
+        <ExperienceCard title="Byggkalkylator, Folkbro AB" date="2021-pågående" description="Tar fram kostnadskalkyler för byggprojekt. Smarbetarar med olika avdelningar i byggbranschen."/>
+        <ExperienceCard title="IT-ansvarig, Folksval AB" date="2021-pågående" description="Delaktig i framtagning och utveckling av webbshop via Wordpress. Sköter produkthantering, UI, styling, lagersaldo mm. Hanterar även kund- och leverantör kontakt."/>
+        <ExperienceCard title="Byggteknik och design, KTH" date="2016-2019" description="Högskoleutbildning i byggteknik med inriktning i konstruktion"/>
+      </section>
 
-  )
+    </div>
+  );
 }
-
-
-const styles = {
-    container: {
-      backgroundColor: '#F5F5F5', // Set the background color
-      padding: '40px', // Add some padding to the container
-      borderRadius: '10px', // Add rounded corners
-      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Add a subtle box shadow
-      textAlign: 'left', // Align text to the left
-    },
-    heading: {
-      fontSize: '24px', // Set the font size for headings
-      fontFamily: 'Arial, sans-serif', // Choose a font family
-      fontWeight: 'bold', // Set font weight to bold
-      color: '#333', // Set text color
-      marginBottom: '16px', // Add spacing below headings
-    },
-    skillList: {
-      listStyleType: 'none', // Remove bullet points for lists
-      paddingLeft: '0', // Remove default list padding
-    },
-    experienceList: {
-      listStyleType: 'none', // Remove bullet points for lists
-      paddingLeft: '0', // Remove default list padding
-    },
-    li: {
-      fontSize: '18px', // Set the font size for list items
-      fontFamily: 'Arial, sans-serif', // Choose a font family
-      color: '#555', // Set text color
-      marginBottom: '8px', // Add spacing between list items
-    },
-  };
-  

@@ -13,6 +13,10 @@ code {
     monospace;
 }
 
+
+/*NAVBAR*/
+
+
 .navbarItem {
   display: flex;
   align-items: center;
@@ -60,7 +64,82 @@ code {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
 }
 
-/* #home {
-  background-color: #BF4F74;
-  
-} */
+/*SKILLS*/
+
+.heading {
+  font-size: 28px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.skillList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.icon-item {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  color: #555;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon-item:hover {
+  transform: scale(1.1);
+}
+
+/* Card container styles */
+#cardscontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin: 20px;
+  cursor: pointer;
+  perspective: 1000px;
+  transition: transform 0.5s;
+}
+
+/* Front side styles */
+.front {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(0deg);
+}
+
+/* Back side styles */
+.back {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+/* Reversed card styles */
+.card.reversed {
+  transform: rotateY(180deg);
+}
+

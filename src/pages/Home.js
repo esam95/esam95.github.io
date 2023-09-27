@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home() {
   return (
-    <div style={styles.container}>
+    <div /* style={styles.container} */>
   <h1 style={styles.heading}>Hej, jag är Esam Ali Gelani</h1>
   <h2 style={styles.subHeading}>En driven frontend utvecklare</h2>
   <p style={styles.paragraph}>

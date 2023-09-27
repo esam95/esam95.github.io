@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <div style={styles.contactContainer}>
+    <div /* style={styles.contactContainer} */>
   <h3>Om du är intresserad av att kontakta mig för arbetsfrågor eller annat, tveka inte att nå ut till mig:</h3>
   <div style={styles.contactItem}>
     <i class="fas fa-linkedin"></i>
