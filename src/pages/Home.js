@@ -7,7 +7,6 @@ function Home() {
       <h2>En driven frontend utvecklare</h2>
       <p>Välkommen till mitt portfolio, här kan du se min erfarenhet och projekt.</p>
     </div>
-
   );
 }
 

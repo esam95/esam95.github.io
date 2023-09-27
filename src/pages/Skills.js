@@ -8,7 +8,7 @@ export default function Skills() {
     <div>
       <section>
         <h2>Under min 2-åriga utbildning på Jensen har jag blivit skicklig på de viktigaste frontend-verktygen.</h2>
-        <ul className="skillList">
+        <ul id="skill-list">
           <li className="icon-item"><FaHtml5 size="3em" color="#E44D26" /> <span>HTML</span></li>
           <li className="icon-item"><FaCss3 size="3em" color="#2196F3" /> <span>CSS</span></li>
           <li className="icon-item"><FaJs size="3em" color="#F7DF1E" /> <span>Javascript</span></li>
