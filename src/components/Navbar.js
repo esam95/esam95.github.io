@@ -5,10 +5,10 @@ export default function Navbar() {
 
   return (
     <nav style={styles.navbar}>
-        <div id={'home'} className={`navbarItem${pathAfterHost === '/' ? ' active' : ''}`} onClick={() => {window.location.href = "/"}}>Home</div>
-        <div className={`navbarItem${pathAfterHost === '/skills' ? ' active' : ''}`} onClick={() => {window.location.href = "/skills"}}>Skills</div>
-        <div className={`navbarItem${pathAfterHost === '/projects' ? ' active' : ''}`} onClick={() => {window.location.href = "/projects"}}>Projects</div>
-        <div className={`navbarItem${pathAfterHost === '/contact' ? ' active' : ''}`}  onClick={() => {window.location.href = "/contact"}}>Contact</div>
+        <div id="homenav" className={`navbarItem${pathAfterHost === '/' ? ' active' : ''}`} onClick={() => {window.location.href = "/"}}>Hem</div>
+        <div id="skillsnav" className={`navbarItem${pathAfterHost === '/skills' ? ' active' : ''}`} onClick={() => {window.location.href = "/skills"}}>Erfarenhet</div>
+        <div id="projectsnav" className={`navbarItem${pathAfterHost === '/projects' ? ' active' : ''}`} onClick={() => {window.location.href = "/projects"}}>Projekt</div>
+        <div id="contactnav"className={`navbarItem${pathAfterHost === '/contact' ? ' active' : ''}`}  onClick={() => {window.location.href = "/contact"}}>Kontakt</div>
     </nav>
   )
 }

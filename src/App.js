@@ -26,12 +26,10 @@ const styles = {
       alignItems: 'stretch',
   },
   navbarcontainer: {
-      //Fixed vertical navbar
       position: 'fixed',
       display: 'flex',
       flex: '0', 
       width: '200px',// Set a fixed width for the sidebar
-      border: '1px solid black',
       top: '0',
       left: '0',
       height: '100vh',
@@ -42,8 +40,6 @@ const styles = {
       flex: '1', // Let it grow to fill the remaining space
       marginLeft: '200px', // Ensure it's positioned to the right of the sidebar
       padding: '20px',
-      border: '1px solid black',
-    //center the content vertically and horizontally 
       alignItems: 'center',
       justifyContent: 'center',
 
