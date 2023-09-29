@@ -58,8 +58,8 @@ body {
 .navbarItem:hover,
 .navbarItem.active:hover {
   background: linear-gradient(to right, #444, #777); /* Darker metallic gradient background on hover */
-  color: white; /* Change the text color to white on hover */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Darker box shadow on hover */
+  color: #1414d6; /* Change the text color to white on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker box shadow for active item */
 }
 
 /*HOME*/
@@ -252,4 +252,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*Scroll button*/
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 999; /* Ensure it appears above other elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3; /* Hover background color */
 }
