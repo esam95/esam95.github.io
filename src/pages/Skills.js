@@ -5,17 +5,17 @@ import ExperienceCard from '../components/ExperienceCard';
 export default function Skills() {
 
   return (
-    <div>
+    <div id='skills-container'>
       <section>
         <h2>Under min 2-åriga utbildning på Jensen har jag blivit skicklig på de viktigaste frontend-verktygen.</h2>
-        <ul id="skill-list">
-          <li className="icon-item"><FaHtml5 size="3em" color="#E44D26" /> <span>HTML</span></li>
-          <li className="icon-item"><FaCss3 size="3em" color="#2196F3" /> <span>CSS</span></li>
-          <li className="icon-item"><FaJs size="3em" color="#F7DF1E" /> <span>Javascript</span></li>
-          <li className="icon-item"><FaReact size="3em" color="#61DAFB" /> <span>React.js</span></li>
-          <li className="icon-item"><FaMobileAlt size="3em" color="#4CAF50" /> <span>React Native</span></li>
-          <li className="icon-item"><FaNodeJs size="3em" color="#339933" /> <span>Node.js</span></li>
-        </ul>
+        <div id="skill-list">
+          <div className="skill-icon"><FaHtml5 size="3em" color="#E44D26" /> <p>HTML</p></div>
+          <div className="skill-icon"><FaCss3 size="3em" color="#2196F3" /> <p>CSS</p></div>
+          <div className="skill-icon"><FaJs size="3em" color="#F7DF1E" /> <p>Javascript</p></div>
+          <div className="skill-icon"><FaReact size="3em" color="#61DAFB" /> <p>React.js</p></div>
+          <div className="skill-icon"><FaMobileAlt size="3em" color="#4CAF50" /> <p>React Native</p></div>
+          <div className="skill-icon"><FaNodeJs size="3em" color="#339933" /> <p>Node.js</p></div>
+        </div>
       </section>
 
       <h2>Min nuvarande anställning och tidigare utbildning är:</h2>

@@ -19,7 +19,7 @@ export default function Projects() {
   ];
   
   return (
-    <div>
+    <div id='projects-container'>
       <h1>Utforska mina projekt nedan:</h1>
       <section id='cardscontainer'>
         <ProjectCard 

@@ -3,11 +3,6 @@ import Navbar from './components/Navbar';
 import { Outlet } from 'react-router-dom';
 
 function App() {
-//   const experience = [
-//     {title: 'Byggkalkylator på Folkbro AB', date: '2021-pågående', description: 'Lorem ipsum dolor'}, 
-//     {title: 'IT-ansvarig på Folksval AB', date: '2021-pågående', description: 'Lorem ipsum dolor'}
-// ];
-
   return (
     <div style={styles.container}>
       <div style={styles.navbarcontainer}><Navbar /></div>
@@ -39,7 +34,6 @@ const styles = {
       display: 'flex',
       flex: '1', // Let it grow to fill the remaining space
       marginLeft: '200px', // Ensure it's positioned to the right of the sidebar
-      padding: '20px',
       alignItems: 'center',
       justifyContent: 'center',
 
