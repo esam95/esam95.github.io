@@ -1,13 +1,13 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import { Outlet } from 'react-router-dom';
+import MainPage from './pages/MainPage';
 
 function App() {
   return (
     <div style={styles.container}>
       <div style={styles.navbarcontainer}><Navbar /></div>
       <section style={styles.mainsectioncontainer}>
-        <Outlet/>
+        <MainPage />
       </section>
     </div>
   );

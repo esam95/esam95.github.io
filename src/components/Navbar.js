@@ -39,10 +39,10 @@ export default function Navbar() {
         <div id="skillsnav" className={`navbarItem${pathAfterHost === '/skills' ? ' active' : ''}`} onClick={() => {window.location.href = "/skills"}}>Erfarenhet</div>
         <div id="projectsnav" className={`navbarItem${pathAfterHost === '/projects' ? ' active' : ''}`} onClick={() => {window.location.href = "/projects"}}>Projekt</div>
         <div id="contactnav"className={`navbarItem${pathAfterHost === '/contact' ? ' active' : ''}`}  onClick={() => {window.location.href = "/contact"}}>Kontakt</div> */}
-        <ScrollLink to="home-container" smooth={true} duration={500} className={`navbarItem ${activeHome}`} onClick={()=> setActive('home')}>h</ScrollLink>
-        <ScrollLink to="skills-container" smooth={true} duration={500} className={`navbarItem ${activeSkills}`} onClick={()=> setActive('skills')}>s</ScrollLink>
-        <ScrollLink to="projects-container" smooth={true} duration={500} className={`navbarItem ${activeProjects}`} onClick={()=> setActive('projects')}>p</ScrollLink>
-        <ScrollLink to="contact-container" smooth={true} duration={500} className={`navbarItem ${activeContact}`} onClick={()=> setActive('contact')}>c</ScrollLink>
+        <ScrollLink to="top" smooth={true} duration={500} className={`navbarItem ${activeHome}`} onClick={()=> setActive('home')}>Hem</ScrollLink>
+        <ScrollLink to="skills-container" smooth={true} duration={500} className={`navbarItem ${activeSkills}`} onClick={()=> setActive('skills')}>Erfarenhet</ScrollLink>
+        <ScrollLink to="projects-container" smooth={true} duration={500} className={`navbarItem ${activeProjects}`} onClick={()=> setActive('projects')}>Projekt</ScrollLink>
+        <ScrollLink to="contact-container" smooth={true} duration={500} className={`navbarItem ${activeContact}`} onClick={()=> setActive('contact')}>Kontakt</ScrollLink>
     </nav>
   )
 }

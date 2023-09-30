@@ -3,7 +3,8 @@ import React from 'react'
 export default function Contact() {
   return (
     <div id='contact-container'>
-      <h1>Om du är intresserad av att kontakta mig för arbetsfrågor eller annat, tveka inte att nå ut till mig:</h1>
+      <h1>KONTAKT</h1>
+      <h2>Om du är intresserad av att kontakta mig för arbetsfrågor eller annat, tveka inte att nå ut till mig:</h2>
       <section id='icon-container'>
         <div className='contact-icon'>
           <a href="https://www.linkedin.com/in/esam-ali-gelani-181755177/" target="_blank" rel="noopener noreferrer">

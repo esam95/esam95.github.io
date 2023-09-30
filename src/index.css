@@ -8,6 +8,39 @@ body {
   background-color: #71a3c9; /* Darker background color to align with the navbar */
 }
 
+/* Style the <h1> element (main heading) */
+h1 {
+  font-size: 36px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make it bold for emphasis */
+  color: #333; /* Choose an appropriate text color */
+  margin-bottom: 36px; /* Add spacing below the heading */
+}
+
+/* Style the <h2> elements (subheadings) */
+h2 {
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make it bold for emphasis */
+  color: #333; /* Choose an appropriate text color */
+  margin-bottom: 24px; /* Add spacing below the subheadings */
+}
+
+/* Style the <h3> elements (sub-subheadings) */
+h3 {
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: bold; /* Make it bold for emphasis */
+  color: #777; /* Choose an appropriate text color */
+  margin-bottom: 10px; /* Add spacing below the sub-subheadings */
+}
+
+/* Style the <p> elements (paragraph text) */
+p {
+  font-size: 22px; /* Adjust the font size as needed */
+  line-height: 1.5; /* Improve readability with line spacing */
+  color: #333; /* Choose an appropriate text color */
+  margin-bottom: 15px; /* Add spacing below paragraphs */
+}
+
+
 /*NAVBAR*/
  #navbar {
   display: flex;
@@ -64,12 +97,13 @@ body {
 
 /*HOME*/
 
-#home-container {
+#top {
   text-align: center;
   padding: 20px;
   background: url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-52379.jpg?w=2000&t=st=1695900679~exp=1695901279~hmac=f2c6b6fbd2c3e1161344ff68051345d7396e7c07b55d4295dc53ea877988c843');
   width: 100%;
-  min-height: calc(100vh - 40px);
+  box-sizing: border-box;
+  min-height: 100vh;
   background-color: #fff;
 }
 
@@ -80,32 +114,47 @@ body {
   margin: 20px 0;
 }
 
+#top h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px; /* Adjust margin as needed */
+}
+
+#top h2 {
+  font-size: 28px; /* Increase font size */
+  font-weight: bold;
+  margin-bottom: 15px; /* Adjust margin as needed */
+}
+
+#top p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
 #view-work-link {
   display: inline-block;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
   padding: 10px 20px;
-  margin-top: 20px;
-  color: #fff; /* Text color for the button */
-  background-color: #007bff; /* Button background color */
-  border: none;
+  font-size: 16px;
+  background-color: #0056b3; /* Change the background color */
+  color: #fff;
+  text-decoration: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease;
 }
 
 #view-work-link:hover {
-  background-color: #0056b3; /* Button background color on hover */
+  background-color: #00418a; /* Change the background color on hover */
 }
 
 /*SKILLS*/
 
 #skills-container {
   width: 100%;
+  box-sizing: border-box;
   text-align: center;
   padding: 20px;
-  min-height: calc(100vh - 40px);
+  min-height: 100vh;
   background-color: #fff;
 }
 
@@ -142,9 +191,10 @@ body {
 
 #projects-container {
   width: 100%;
+  box-sizing: border-box;
   text-align: center;
   padding: 20px;
-  min-height: calc(100vh - 40px);
+  min-height: 100vh;
   background-color: rgba(255, 255, 255, 0.9); /* White with 10% grey (90% opaque) */
 
 }
@@ -169,10 +219,40 @@ body {
   font-size: 20px;
   font-family: Arial, sans-serif;
   color: #555;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
   display: flex;
   align-items: center;
   transition: transform 0.2s ease-in-out;
+}
+
+/*Project links*/
+
+#project-links {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  flex-direction: row;
+  justify-content: space-evenly; /* Distribute space between items */
+  align-content: center; /* Distribute space between rows */
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+}
+
+.read-more-link {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #6c87a4; /* Change the background color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-link:hover {
+  background-color: #00418a; /* Change the background color on hover */
 }
 
 /* Card container styles */
@@ -187,8 +267,8 @@ body {
 .card {
   width: 240px;
   height: 380px;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #9eedf7;
+  /* border: 3px solid #333; */
   border-radius: 15px;
   margin: 20px;
   cursor: pointer;
@@ -231,9 +311,10 @@ body {
 
 #contact-container {
   width: 100%;
+  box-sizing: border-box;
   text-align: center;
   padding: 20px;
-  min-height: calc(100vh - 40px);
+  min-height: 100vh;
   background-color: #fff;
 
 }

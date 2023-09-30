@@ -1,39 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaArrowUp } from 'react-icons/fa';
-
-import { FaHtml5, FaCss3, FaJs, FaReact, FaMobileAlt, FaNodeJs } from 'react-icons/fa';
-import ExperienceCard from '../components/ExperienceCard';
-import ProjectCard from '../components/ProjectCard';
-import ScrollToTopButton from '../components/ScrollToTopButton';
+import ScrollToTopButton from '../ScrollToTopButton';
 
 
-const webbshopIcons = [
-  <FaHtml5 key="html" size="1em" color="#E44D26" />,
-  <FaCss3 key="css" size="1em" color="#2196F3" />,
-  <FaJs key="js" size="1em" color="#F7DF1E" />,
-  <FaReact key="react" size="1em" color="#61DAFB" />,
-  <FaNodeJs size="1em" color="#339933" />
-];
-
-const omdbIcons = [
-  <FaHtml5 key="html" size="1em" color="#E44D26" />,
-  <FaCss3 key="css" size="1em" color="#2196F3" />,
-  <FaJs key="js" size="1em" color="#F7DF1E" />,
-  <FaReact key="react" size="1em" color="#61DAFB" />,
-];
 
 function Home() {
   return (
     <div id='top'>
-    <div id='home-container'>
       <h1>Hej, jag är Esam Ali Gelani</h1>
       <h2>En driven frontend utvecklare</h2>
       <p>Välkommen till mitt portfolio, här kan du se min erfarenhet och projekt.</p>
       {/* <img src="../images/Esam.jpeg" alt="" id="profile-image" /> */}
       <Link to="/work" id="view-work-link">View My Work</Link>
-    </div>
-    <div id='skills-container'>
+      <ScrollToTopButton />
+
+    {/* <div id='skills-container'>
       <section>
         <h2>Under min 2-åriga utbildning på Jensen har jag blivit skicklig på de viktigaste frontend-verktygen.</h2>
         <div id="skill-list">
@@ -98,8 +79,7 @@ function Home() {
           </a>
         </div>
       </section>
-    </div>
-    <ScrollToTopButton />
+    </div> */}
 
     </div>
   );
