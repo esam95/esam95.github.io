@@ -99,12 +99,17 @@ p {
 
 #top {
   text-align: center;
-  padding: 20px;
+  padding: 60px;
   background: url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-52379.jpg?w=2000&t=st=1695900679~exp=1695901279~hmac=f2c6b6fbd2c3e1161344ff68051345d7396e7c07b55d4295dc53ea877988c843');
   width: 100%;
   box-sizing: border-box;
   min-height: 100vh;
   background-color: #fff;
+  display: flex;
+  flex-direction: column; /* Vertically center children */
+  justify-content: center; /* Horizontally center children */
+  align-items: center; /* Vertically center children */
+
 }
 
 #profile-image {
@@ -115,37 +120,42 @@ p {
 }
 
 #top h1 {
-  font-size: 36px;
+  font-size: 46px;
   font-weight: bold;
   margin-bottom: 15px; /* Adjust margin as needed */
+  color: #fff;
 }
 
 #top h2 {
-  font-size: 28px; /* Increase font size */
+  font-size: 38px; /* Increase font size */
   font-weight: bold;
   margin-bottom: 15px; /* Adjust margin as needed */
+  color: #fff;
 }
 
-#top p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px; /* Adjust margin as needed */
-}
-
-#view-work-link {
+/* Define the button style */
+#view-work-button {
   display: inline-block;
   padding: 10px 20px;
-  font-size: 16px;
-  background-color: #0056b3; /* Change the background color */
+  margin-top: 50px;
+  font-size: 28px;
+  background-color: #0056b3;
   color: #fff;
   text-decoration: none;
+  border: 2px solid #0056b3;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#view-work-link:hover {
-  background-color: #00418a; /* Change the background color on hover */
+/* Add hover effects */
+#view-work-button:hover {
+  background-color: #00418a;
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect on hover */
+  cursor: pointer; /* Change cursor to a pointer on hover */
 }
+
+
 
 /*SKILLS*/
 
@@ -153,7 +163,7 @@ p {
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-  padding: 20px;
+  padding: 60px;
   min-height: 100vh;
   background-color: #fff;
 }
@@ -193,7 +203,7 @@ p {
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-  padding: 20px;
+  padding: 60px;
   min-height: 100vh;
   background-color: rgba(255, 255, 255, 0.9); /* White with 10% grey (90% opaque) */
 
@@ -265,8 +275,10 @@ p {
 }
 
 .card {
-  width: 240px;
-  height: 380px;
+  width: 260px;
+  height: 400px;
+  box-sizing: border-box;
+  padding: 10px;
   background-color: #9eedf7;
   /* border: 3px solid #333; */
   border-radius: 15px;
@@ -313,7 +325,7 @@ p {
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-  padding: 20px;
+  padding: 60px;
   min-height: 100vh;
   background-color: #fff;
 
@@ -324,12 +336,14 @@ p {
   flex-wrap: wrap; /* Allow items to wrap to the next row */
   justify-content: center; /* Distribute space between items */
   align-content: center; /* Distribute space between rows */
+  margin-right: 15%;
+  margin-left: 15%;
 }
 
 .contact-icon {
   width: calc(50% - 10px); /* Each item takes 50% width with a little spacing */
   height: calc(50% - 10px); /* Each item takes 50% height with a little spacing */
-  margin-top: 80px; /* Add spacing between items */
+  margin-top: 100px; /* Add spacing between items */
   display: flex;
   align-items: center;
   justify-content: center;

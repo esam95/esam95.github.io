@@ -8,7 +8,7 @@ export default function Skills() {
     <div id='skills-container'>
       <section>
         <h1>OM MIG</h1>
-        <h2>Under min 2-åriga utbildning på Jensen har jag blivit skicklig på de viktigaste frontend-verktygen.</h2>
+        <h2>Under min 2-åriga utbildning på Jensen har jag blivit skicklig på de viktigaste frontend-verktygen:</h2>
         <div id="skill-list">
           <div className="skill-icon"><FaHtml5 size="3em" color="#E44D26" /> <h5>HTML</h5></div>
           <div className="skill-icon"><FaCss3 size="3em" color="#2196F3" /> <h5>CSS</h5></div>
@@ -21,10 +21,22 @@ export default function Skills() {
 
       <h2>Min nuvarande anställning och tidigare utbildning är:</h2>
       <section id='cardscontainer'>
-        <ExperienceCard title="Frontendutvecklare, Jensen YH" date="2022-pågående" description="Har lärt mig de viktigaste frontendverktygen, gjort flertalet projekt i grupp med versionhantering i github."/>
-        <ExperienceCard title="Byggkalkylator, Folkbro AB" date="2021-pågående" description="Tar fram kostnadskalkyler för byggprojekt. Smarbetarar med olika avdelningar i byggbranschen."/>
-        <ExperienceCard title="IT-ansvarig, Folksval AB" date="2021-pågående" description="Delaktig i framtagning och utveckling av webbshop via Wordpress. Sköter produkthantering, UI, styling, lagersaldo mm. Hanterar även kund- och leverantör kontakt."/>
-        <ExperienceCard title="Byggteknik och design, KTH" date="2016-2019" description="Högskoleutbildning i byggteknik med inriktning i konstruktion"/>
+        <ExperienceCard 
+          title="Frontendutvecklare, Jensen YH" 
+          date="2022-pågående" 
+          description="Har lärt mig de viktigaste frontendverktygen samt gjort flertalet projekt i grupp med versionhantering i github."/>
+        <ExperienceCard 
+          title="Byggkalkylator, Folkbro AB" 
+          date="2021-pågående" 
+          description="Tar fram kostnadskalkyler för byggprojekt i samarbete med olika aktörer inom byggbranschen."/>
+        <ExperienceCard 
+          title="IT-ansvarig, Folksval AB" 
+          date="2021-pågående" 
+          description="Delaktig i framtagning och utveckling av webbshop via Wordpress. Sköter produkthantering, UI, styling, lagersaldo mm. Hanterar även kund- och leverantör kontakt."/>
+        <ExperienceCard 
+          title="Byggteknik och design, KTH" 
+          date="2016-2019" 
+          description="Högskoleutbildning i byggteknik med inriktning i konstruktion"/>
       </section>
     </div>
   );

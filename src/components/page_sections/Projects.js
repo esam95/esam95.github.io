@@ -24,14 +24,14 @@ export default function Projects() {
       <section id='cardscontainer'>
         <ProjectCard 
           title="Webbshop" 
-          description="En webbshop som konsumerar data från livesatt API via Railway. Innehar CRUD för produkter, kundvagn och utcheckning." 
+          description="Webbshop som hämtar data från livesatt API via Railway. Har CRUD-funktionalitet för produkthantering, kundvagn och utcheckning." 
           imagelink="../images/webbshop-screenshot.JPG" 
           githublink="https://github.com/esam95/Webbshop-livs" 
           demolink="https://webbshop-livs.vercel.app/"
           icons={webbshopIcons}/>
         <ProjectCard 
           title="OMDB API" 
-          description="Webbsida som hämtar data från omdbapi.com. Data visas genom sökfunktion där man kan välja filmer, serier, spel o.s.v." 
+          description="Webbsida som hämtar data från omdbapi.com. Inkluderar sökfunktion där man kan välja filmer, serier, spel o.s.v." 
           imagelink="../images/omdb-api-screenshot.JPG" 
           githublink="https://github.com/esam95/omdb" 
           demolink="https://omdb-seven.vercel.app/"

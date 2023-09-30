@@ -12,7 +12,7 @@ export default function ProjectCard ({ title, description, imagelink, githublink
     <div className={`card ${isReversed ? 'reversed' : ''}`} onClick={handleCardClick}>
       {isReversed ? 
       <div className="back">
-        <ul id='stack-list'>
+        <ul id='stack-list' style={{ position: 'absolute', top: '5px'}}>
         {icons.map((icon, index) => {
         return (
         <div key={index} className="stack-item">{icon}</div>
@@ -20,7 +20,7 @@ export default function ProjectCard ({ title, description, imagelink, githublink
 
         </ul>
         <p>{description}</p>
-        <div id="project-links">
+        <div id="project-links" style={{ position: 'absolute', bottom: '5px', marginTop: '3px'  }}>
           <div className="project-link">
             <a href={githublink} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github" style={{ fontSize: '36px' }}></i>

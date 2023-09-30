@@ -1,17 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import ScrollToTopButton from '../ScrollToTopButton';
-
-
+import { animateScroll as scroll } from 'react-scroll';
 
 function Home() {
-  return (
+  const scrollDownByViewport = () => {
+  const viewportHeight = window.innerHeight;
+  const newScrollPosition = window.scrollY + viewportHeight;
+  scroll.scrollTo(newScrollPosition, {
+    duration: 500, // Duration for smooth scrolling (adjust as needed)
+    spy: false, // Disable spy mode (not needed for this)
+  })};
+
+    return (
     <div id='top'>
-      <h1>Hej, jag är Esam Ali Gelani</h1>
-      <h2>En driven frontend utvecklare</h2>
-      <p>Välkommen till mitt portfolio, här kan du se min erfarenhet och projekt.</p>
+      <h1>Hej, jag är Esam Ali Gelani.</h1>
+      <h2>Jag är en frontend-utvecklare.</h2>
       {/* <img src="../images/Esam.jpeg" alt="" id="profile-image" /> */}
-      <Link to="/work" id="view-work-link">View My Work</Link>
+      <button onClick={scrollDownByViewport} id="view-work-button">Se mina projekt</button>
       <ScrollToTopButton />
 
     {/* <div id='skills-container'>
