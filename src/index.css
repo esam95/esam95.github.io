@@ -53,18 +53,19 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-grow: 0.2;
   width: 100%;
   cursor: pointer;
   border-bottom: 1px solid grey;
   text-decoration: none;
-  color: #ccc; /* Metallic font color */
-  font-size: 20px;
+  color: #fff; /* White text color */
+  font-size: 24px;
   font-weight: bold;
   letter-spacing: 1px;
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out; /* Added color transition */
-  flex: 1; /* Make each item fill the available vertical space equally */
-  background: linear-gradient(to right, #333, #666); /* Dark metallic gradient background */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker box shadow */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  flex: 1;
+  background: linear-gradient(to right, #007bff, #0056b3); /* Blue gradient background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 #contactnav {
@@ -78,22 +79,28 @@ p {
   width: 100%;
   cursor: pointer;
   text-decoration: none;
-  color: #1414d6; /* Metallic font color for active item */
-  font-size: 20px;
+  color: #ccc; /* Grey text color when active */
+  font-size: 24px;
   font-weight: bold;
   letter-spacing: 1px;
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out; /* Added color transition */
-  flex: 1; /* Make each item fill the available vertical space equally */
-  background: linear-gradient(to right, #444, #777); /* Darker metallic gradient background for active item */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker box shadow for active item */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  flex: 1;
+  background: linear-gradient(to right, #0056b3, #00418a);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.navbarItem:hover,
-.navbarItem.active:hover {
-  background: linear-gradient(to right, #444, #777); /* Darker metallic gradient background on hover */
-  color: #1414d6; /* Change the text color to white on hover */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker box shadow for active item */
+.navbarItem:hover {
+  background: linear-gradient(to right, #0056b3, #00418a); /* Blue gradient background on hover */
+  color: #ccc; /* Grey text color on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+.navbarItem.active:hover {
+  background: linear-gradient(to right, #0056b3, #00418a);
+  color: #ccc; /* Grey text color when active and on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 
 /*HOME*/
 

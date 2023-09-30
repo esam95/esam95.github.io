@@ -42,7 +42,7 @@ export default function Navbar() {
         <ScrollLink to="top" smooth={true} duration={500} className={`navbarItem ${activeHome}`} onClick={()=> setActive('home')}>Hem</ScrollLink>
         <ScrollLink to="skills-container" smooth={true} duration={500} className={`navbarItem ${activeSkills}`} onClick={()=> setActive('skills')}>Erfarenhet</ScrollLink>
         <ScrollLink to="projects-container" smooth={true} duration={500} className={`navbarItem ${activeProjects}`} onClick={()=> setActive('projects')}>Projekt</ScrollLink>
-        <ScrollLink to="contact-container" smooth={true} duration={500} className={`navbarItem ${activeContact}`} onClick={()=> setActive('contact')}>Kontakt</ScrollLink>
+        <ScrollLink to="contact-container" smooth={true} duration={500} className={`navbarItem ${activeContact}`} onClick={()=> setActive('contact')} id='contactnav'>Kontakt</ScrollLink>
     </nav>
   )
 }
