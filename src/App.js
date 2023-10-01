@@ -1,41 +1,52 @@
+import React, { useState, useEffect } from 'react'
+
 import './App.css';
 import Navbar from './components/Navbar';
 import MainPage from './pages/MainPage';
 
 function App() {
+  const [showNavbar, setShowNavbar] = useState(false);
+  
+  /*Horizontal navbar popping up when scrolling down from home sextion*/
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerWidth <= 768) {
+        if (window.scrollY >= window.innerHeight-1) {
+          setShowNavbar(true);
+        } else {
+          setShowNavbar(false);
+        }
+      } else {
+        // If viewport width is greater than 768px, always show the navbar
+        setShowNavbar(true);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [showNavbar]);
+
+  const navbarStyle = {
+    top: showNavbar ? '0' : '-100px',
+  };
+
+  /*Toggling horizontal navbar*/
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleNavbar = () => {
+    if(isOpen === true) {
+      setIsOpen(false);
+    }else {
+      return null;
+    }
+  }
+
   return (
-    <div style={styles.container}>
-      <div style={styles.navbarcontainer}><Navbar /></div>
-      <section style={styles.mainsectioncontainer}>
-        <MainPage />
-      </section>
+    <div id='container' onClick={toggleNavbar}>
+      {showNavbar && <div id='navbar-container' style={navbarStyle}><Navbar isOpen={isOpen} setIsOpen={setIsOpen}/></div>}
+      <section id='mainsection-container'><MainPage /></section>
     </div>
   );
 }
 
 export default App;
-
-const styles = {
-  container: {
-      display: 'flex',
-      alignItems: 'stretch',
-  },
-  navbarcontainer: {
-      position: 'fixed',
-      display: 'flex',
-      flex: '0', 
-      width: '200px',// Set a fixed width for the sidebar
-      top: '0',
-      left: '0',
-      height: '100vh',
-      
-  },
-  mainsectioncontainer: {
-      display: 'flex',
-      flex: '1', // Let it grow to fill the remaining space
-      marginLeft: '200px', // Ensure it's positioned to the right of the sidebar
-      alignItems: 'center',
-      justifyContent: 'center',
-
-  },
-}

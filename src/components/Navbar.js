@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link as ScrollLink } from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons'; // Import the hamburger icon
 
-export default function Navbar() {
-  // const pathAfterHost = window.location.pathname;
+export default function Navbar({isOpen, setIsOpen}) {
+  /*Highlighting active vertical navbar item*/
   let activeHome = false;
   let activeSkills = false;
   let activeProjects = false;
   let activeContact = false;
-
 
   const[active, setActive] = useState('home');
 
@@ -33,16 +34,47 @@ export default function Navbar() {
     activeContact = 'active'
   }
 
+  /*Toggling horizontal navbar*/
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  /*Changing navbar based on vp width*/
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
+    <div style={{width: '100%'}}>
+    {windowWidth <= 768 ?
+    <nav id="hamburger-navbar">
+        <div id="hamburger" onClick={toggleNavbar}>
+          <FontAwesomeIcon icon={faBars} size='3x'/>
+        </div>
+        {isOpen ? <div id={`nav-links`} onClick={toggleNavbar}>
+          <ScrollLink to="top" smooth={true} duration={500}  onClick={toggleNavbar} >Hem</ScrollLink>
+          <ScrollLink to="skills-container" smooth={true} duration={500} onClick={toggleNavbar}>Erfarenhet</ScrollLink>
+          <ScrollLink to="projects-container" smooth={true} duration={500} onClick={toggleNavbar}>Projekt</ScrollLink>
+          <ScrollLink to="contact-container" smooth={true} duration={500} onClick={toggleNavbar}>Kontakt</ScrollLink>
+        </div>: null}
+    </nav>: 
     <nav id='navbar'>
-        {/* <div id="homenav" className={`navbarItem${pathAfterHost === '/' ? ' active' : ''}`} onClick={() => {window.location.href = "/"}}>Hem</div>
-        <div id="skillsnav" className={`navbarItem${pathAfterHost === '/skills' ? ' active' : ''}`} onClick={() => {window.location.href = "/skills"}}>Erfarenhet</div>
-        <div id="projectsnav" className={`navbarItem${pathAfterHost === '/projects' ? ' active' : ''}`} onClick={() => {window.location.href = "/projects"}}>Projekt</div>
-        <div id="contactnav"className={`navbarItem${pathAfterHost === '/contact' ? ' active' : ''}`}  onClick={() => {window.location.href = "/contact"}}>Kontakt</div> */}
-        <ScrollLink to="top" smooth={true} duration={500} className={`navbarItem ${activeHome}`} onClick={()=> setActive('home')}>Hem</ScrollLink>
-        <ScrollLink to="skills-container" smooth={true} duration={500} className={`navbarItem ${activeSkills}`} onClick={()=> setActive('skills')}>Erfarenhet</ScrollLink>
-        <ScrollLink to="projects-container" smooth={true} duration={500} className={`navbarItem ${activeProjects}`} onClick={()=> setActive('projects')}>Projekt</ScrollLink>
-        <ScrollLink to="contact-container" smooth={true} duration={500} className={`navbarItem ${activeContact}`} onClick={()=> setActive('contact')} id='contactnav'>Kontakt</ScrollLink>
+      <ScrollLink to="top" smooth={true} duration={500} className={`navbarItem ${activeHome}`} onClick={()=> setActive('home')}>Hem</ScrollLink>
+      <ScrollLink to="skills-container" smooth={true} duration={500} className={`navbarItem ${activeSkills}`} onClick={()=> setActive('skills')}>Erfarenhet</ScrollLink>
+      <ScrollLink to="projects-container" smooth={true} duration={500} className={`navbarItem ${activeProjects}`} onClick={()=> setActive('projects')}>Projekt</ScrollLink>
+      <ScrollLink to="contact-container" smooth={true} duration={500} className={`navbarItem ${activeContact}`} onClick={()=> setActive('contact')} id='contactnav'>Kontakt</ScrollLink>
     </nav>
+    }
+    </div>
   )
 }
