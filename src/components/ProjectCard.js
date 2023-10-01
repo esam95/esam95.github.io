@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 export default function ProjectCard ({ title, description, imagelink, githublink, demolink, icons }) {
   const [isReversed, setIsReversed] = useState(false);
@@ -27,7 +26,7 @@ export default function ProjectCard ({ title, description, imagelink, githublink
             </a>
           </div>
           <div className="project-link">
-            <Link to={demolink} className="read-more-link">Online demo</Link>
+            <a href={demolink} target="_blank" className="read-more-link" rel="noopener noreferrer">Online demo</a>
           </div>
         </div>
       </div>:

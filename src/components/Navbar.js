@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons'; // Import the hamburger icon
 
-export default function Navbar({isOpen, setIsOpen}) {
+export default function Navbar({isOpen, setIsOpen, windowWidth}) {
   /*Highlighting active vertical navbar item*/
   let activeHome = false;
   let activeSkills = false;
@@ -38,21 +38,6 @@ export default function Navbar({isOpen, setIsOpen}) {
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
-
-  /*Changing navbar based on vp width*/
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   return (
     <div style={{width: '100%'}}>
