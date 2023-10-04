@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.87d95a00.css",
-    "main.js": "/static/js/main.13eea7fa.js",
+    "main.js": "/static/js/main.c07d2fa0.js",
     "static/media/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner-min.jpg": "/static/media/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner-min.641fe97c054d20841cf8.jpg",
     "index.html": "/index.html",
     "main.87d95a00.css.map": "/static/css/main.87d95a00.css.map",
-    "main.13eea7fa.js.map": "/static/js/main.13eea7fa.js.map"
+    "main.c07d2fa0.js.map": "/static/js/main.c07d2fa0.js.map"
   },
   "entrypoints": [
     "static/css/main.87d95a00.css",
-    "static/js/main.13eea7fa.js"
+    "static/js/main.c07d2fa0.js"
   ]
 }
