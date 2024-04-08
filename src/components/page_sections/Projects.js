@@ -24,7 +24,7 @@ export default function Projects() {
       <section id='cardscontainer'>
         <ProjectCard 
           title="Webbshop" 
-          description="Webbshop som hämtar data från livesatt API via Railway. Har CRUD-funktionalitet för produkthantering, kundvagn och utcheckning." 
+          description="Webbshop som hämtar data från datbas i Firestore. Har CRUD-funktionalitet för produkthantering, kundvagn och utcheckning." 
           imagelink="../images/webbshop-screenshot.JPG" 
           githublink="https://github.com/esam95/Webbshop-livs" 
           demolink="https://webbshop-livs.vercel.app/"
