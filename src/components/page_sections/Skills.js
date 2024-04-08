@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGit, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FaHtml5, FaCss3, FaJs, FaReact, FaMobileAlt, FaNodeJs } from 'react-icons/fa';
+import { SiTypescript } from 'react-icons/si'; // This is for the TypeScript icon
 import ExperienceCard from '../ExperienceCard';
 
 export default function Skills() {
@@ -15,6 +16,7 @@ export default function Skills() {
           <div className="skill-icon"><FaHtml5 size="3em" color="#E44D26" /> <h5>HTML</h5></div>
           <div className="skill-icon"><FaCss3 size="3em" color="#2196F3" /> <h5>CSS</h5></div>
           <div className="skill-icon"><FaJs size="3em" color="#F7DF1E" /> <h5>Javascript</h5></div>
+          <div className="skill-icon"><SiTypescript size="3em" color="#3178C6" /><h5>TypeScript</h5></div>
           <div className="skill-icon"><FaReact size="3em" color="#61DAFB" /> <h5>React.js</h5></div>
           <div className="skill-icon"><FaMobileAlt size="3em" color="#4CAF50" /> <h5>React Native</h5></div>
           <div className="skill-icon"><FaNodeJs size="3em" color="#339933" /> <h5>Node.js</h5></div>
