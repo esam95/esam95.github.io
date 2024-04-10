@@ -187,6 +187,9 @@ p {
 }
 
 /*SKILLS*/
+.slick-arrow {
+  background-color: #007bff;
+}
 
 #skills-container {
   width: 100%;
@@ -225,6 +228,25 @@ p {
 .skill-icon:hover {
   transform: scale(1.1);
 }
+
+/*SLIDER*/
+
+#slider-container {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-track > div {
+  display: flex !important;
+  justify-content: center !important;
+
+}
+
+#slider-container .slick-prev, #slider-container .slick-next{
+  background: grey;
+  border-radius: 50%;
+}
+
 
 /*PROJECTS*/
 

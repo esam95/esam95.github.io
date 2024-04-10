@@ -3,7 +3,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons'; // Import the hamburger icon
 
-export default function Navbar({isOpen, setIsOpen, windowWidth}) {
+export default function Navbar({isNavbarOpen, setIsNavbarOpen, windowWidth}) {
   /*Highlighting active vertical navbar item*/
   let activeHome = false;
   let activeSkills = false;
@@ -36,7 +36,7 @@ export default function Navbar({isOpen, setIsOpen, windowWidth}) {
 
   /*Toggling horizontal navbar*/
   const toggleNavbar = () => {
-    setIsOpen(!isOpen);
+    setIsNavbarOpen(!isNavbarOpen);
   };
 
   return (
@@ -46,7 +46,7 @@ export default function Navbar({isOpen, setIsOpen, windowWidth}) {
         <div id="hamburger" onClick={toggleNavbar}>
           <FontAwesomeIcon icon={faBars} size='3x'/>
         </div>
-        {isOpen ? <div id={`nav-links`} onClick={toggleNavbar}>
+        {isNavbarOpen ? <div id={`nav-links`} onClick={toggleNavbar}>
           <ScrollLink to="top" smooth={true} duration={500}  onClick={toggleNavbar} >Hem</ScrollLink>
           <ScrollLink to="skills-container" smooth={true} duration={500} onClick={toggleNavbar}>Erfarenhet</ScrollLink>
           <ScrollLink to="projects-container" smooth={true} duration={500} onClick={toggleNavbar}>Projekt</ScrollLink>

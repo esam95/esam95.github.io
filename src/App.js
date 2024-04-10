@@ -47,10 +47,10 @@ function App() {
   };
 
   /*Toggling horizontal navbar*/
-  const [isOpen, setIsOpen] = useState(false);
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const toggleNavbar = () => {
-    if(isOpen === true) {
-      setIsOpen(false);
+    if(isNavbarOpen === true) {
+      setIsNavbarOpen(false);
     }else {
       return null;
     }
@@ -58,9 +58,9 @@ function App() {
 
   return (
     <div id='container' onClick={toggleNavbar}>
-      {windowWidth <= 768 && showNavbar === true ? <div id='navbar-container' style={navbarStyle}><Navbar isOpen={isOpen} setIsOpen={setIsOpen} windowWidth={windowWidth}/></div> : null}
+      {windowWidth <= 768 && showNavbar === true ? <div id='navbar-container' style={navbarStyle}><Navbar isNavbarOpen={isNavbarOpen} setIsNavbarOpen={setIsNavbarOpen} windowWidth={windowWidth}/></div> : null}
       {windowWidth > 768 ? <div id='navbar-container'><Navbar windowWidth={windowWidth}/></div> : null}
-      <section id='mainsection-container'><MainPage /></section>
+      <section id='mainsection-container'><MainPage  windowWidth={windowWidth}/></section>
     </div>
   );
 }

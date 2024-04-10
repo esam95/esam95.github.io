@@ -4,11 +4,11 @@ import Skills from '../components/page_sections/Skills';
 import Projects from '../components/page_sections/Projects';
 import Contact from '../components/page_sections/Contact';
 
-export default function MainPage() {
+export default function MainPage({ windowWidth }) {
   return (
     <div style={{ width: '100%' }}>
         <Home />
-        <Skills />
+        <Skills windowWidth={windowWidth}/>
         <Projects />
         <Contact />
     </div>
