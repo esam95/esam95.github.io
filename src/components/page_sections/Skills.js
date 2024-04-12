@@ -40,7 +40,7 @@ export default function Skills({ windowWidth }) {
 
       <h2>Min nuvarande anställning och tidigare utbildning är:</h2>
       <section id='slider-container'>
-        <Slider style={{ maxWidth: windowWidth <= 768 ? '100vw': 'calc(100vw - 400px)'}} {...settings}>
+        <Slider style={{ maxWidth: windowWidth <= 768 ? '80vw': 'calc(100vw - 400px)'}} {...settings}>
           <ExperienceCard 
             title="LIA, Hitract AB" 
             date="2023/11-2023/05" 
