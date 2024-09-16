@@ -19,6 +19,7 @@ export default function Skills({ windowWidth }) {
     centerMode: false,
   };
   console.log(windowWidth)
+  
   return (
     <div id='skills-container'>
       <section>
@@ -34,7 +35,10 @@ export default function Skills({ windowWidth }) {
           <div className="skill-icon"><FaMobileAlt size="3em" color="#4CAF50" /> <h5>React Native</h5></div>
           <div className="skill-icon"><FaNodeJs size="3em" color="#339933" /> <h5>Node.js</h5></div>
           <div className="skill-icon"><FontAwesomeIcon icon={faGit} size="3x" /> <h5>Git</h5></div>
-          <div className="skill-icon"><FontAwesomeIcon icon={faGithub} size="3x" /> <h5>Github</h5></div>
+          <div className="skill-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS" style={{ width: '3em', height: '3em' }} />
+            <h5>Tailwind CSS</h5>
+          </div>
         </div>
       </section>
 
