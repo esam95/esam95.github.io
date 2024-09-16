@@ -19,12 +19,12 @@ export default function Skills({ windowWidth }) {
     centerMode: false,
   };
   console.log(windowWidth)
-  
+
   return (
     <div id='skills-container'>
       <section>
         <h1>OM MIG</h1>
-        <h2>Under min 2-åriga utbildning på Jensen har jag blivit skicklig på de viktigaste frontend-verktygen:</h2>
+        <h2>Under min 2-åriga utbildning på Jensen yrkeshögskola har jag blivit skicklig på de viktigaste frontend-verktygen:</h2>
         <div id="skill-list">
           <div className="skill-icon"><FaHtml5 size="3em" color="#E44D26" /> <h5>HTML</h5></div>
           <div className="skill-icon"><FaCss3 size="3em" color="#2196F3" /> <h5>CSS</h5></div>

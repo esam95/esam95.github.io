@@ -28,7 +28,7 @@ export default function Projects() {
   
   return (
     <div id='projects-container'>
-      <h1>PROJEKT</h1>
+      <h1>AVSLUTADE PROJEKT</h1>
       <section id='cardscontainer'>
         <ProjectCard 
           title="Upprustningen Sports Club" 
